@@ -22,7 +22,7 @@ Add this to your module's `build.gradle` file (make sure the version matches the
 ```gradle
 dependencies {
 	...
-	implementation 'com.github.moh-abdullah-it:android-routes:v0.1.0'
+	implementation 'com.github.moh-abdullah-it:android-routes:0.1.0.1'
 }
 ```
 
