@@ -1,4 +1,4 @@
-package sa.com.first1.route;
+package net.code.line.route;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("sa.com.first1.route.test", appContext.getPackageName());
+        assertEquals("net.code.line.route.test", appContext.getPackageName());
     }
 }

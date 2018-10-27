@@ -1,4 +1,4 @@
-package sa.com.first1.route;
+package net.code.line.route;
 
 import org.junit.Test;
 
