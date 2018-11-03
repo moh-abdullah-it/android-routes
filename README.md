@@ -22,14 +22,14 @@ Add this to your module's `build.gradle` file (make sure the version matches the
 ```gradle
 dependencies {
 	...
-	implementation 'com.github.moh-abdullah-it:android-routes:0.1.0.1'
+	implementation 'com.github.moh-abdullah-it:android-routes:0.1.1.0'
 }
 ```
 
 
 ## Usage
 
-1- Create your Route Class
+- Create your Route Class
 
 ``` Android
 public class Route extends BaseRoute {
@@ -43,7 +43,7 @@ public class Route extends BaseRoute {
     ....
 }
 ```
-2- add routes to `Route.java` example:
+- add routes to `Route.java` example:
 
 ``` Android
     public Route mainActivity() {
@@ -51,7 +51,7 @@ public class Route extends BaseRoute {
         return this;
     }
 ```
-3- in any place from your project can use route
+- in any place from your project can use route
 
 ``` Android
     Route route;
@@ -60,7 +60,7 @@ public class Route extends BaseRoute {
 
     route.mainActivity().start();
 ```
-4- withData:
+- withData:
 
 ``` Android
     route.mainActivity()
@@ -69,7 +69,7 @@ public class Route extends BaseRoute {
          .start();
 ```
 
-5- check condition before start:
+- check condition before start:
 
 ``` Android
     route.mainActivity()
@@ -77,13 +77,21 @@ public class Route extends BaseRoute {
          .withData("title","activity title")
          .start(your condition here);
 ```
-6- check route has data:
+
+- start route on click view:
+
+``` Android
+    route.mainActivity()
+        .startOnClick(view);
+```
+
+- check route has data:
 ``` Android
     if(route.has("id")){
       //this is true
     }
 ```
-7- get data from route:
+- get data from route:
 ``` Android
     Int id = route.getInt("id");
     String title = route.getString("title");

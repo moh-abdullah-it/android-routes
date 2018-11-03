@@ -2,6 +2,7 @@ package net.code.line.route;
 
 import android.content.Context;
 import android.content.Intent;
+import android.view.View;
 
 /**
  * Android Routes
@@ -65,6 +66,26 @@ public class BaseRoute {
         if(middleware){
             this.context.startActivity(this.intent);
         }
+    }
+
+    public void startOnClick(View view) {
+        view.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                start();
+            }
+        });
+    }
+
+    public void startOnClick(View view, final boolean middleware) {
+        view.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+               if(middleware){
+                   start();
+               }
+            }
+        });
     }
 
     /**
