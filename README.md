@@ -22,7 +22,7 @@ Add this to your module's `build.gradle` file (make sure the version matches the
 ```gradle
 dependencies {
 	...
-	implementation 'com.github.moh-abdullah-it:android-routes:0.1.1.0'
+	implementation 'com.github.moh-abdullah-it:android-routes:0.1.2.0'
 }
 ```
 
@@ -96,6 +96,19 @@ public class Route extends BaseRoute {
     Int id = route.getInt("id");
     String title = route.getString("title");
 ```
+- call phone number:
+``` Android
+    route.call("phone number").start()
+```
+- browse url:
+``` Android
+    route.url("your url").start()
+```
+- shear text and url:
+``` Android
+    route.shareTextUrl("title","url").start()
+```
+
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
